@@ -52,3 +52,7 @@ def button_click(self, text):
         self.entry.delete(len(self.entry.get()) - 1, tk.END)
     else:
         self.entry.insert(tk.END, text)
+
+root = tk.Tk()
+calculator = Calculator(root)
+root.mainloop()
