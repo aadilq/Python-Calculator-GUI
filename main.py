@@ -35,3 +35,20 @@ class Calculator:
         def create_button(self, text, row, column):
          button = tk.Button(self.master, text=text, width=5, height=2, font=('Arial', 16), command=lambda: self.button_click(text))
          button.grid(row=row, column=column, padx=5, pady=5)
+
+
+def button_click(self, text):
+    if text == "=":
+        try:
+            result = str(eval(self.entry.get()))
+            self.entry.delete(0, tk.END)
+            self.entry.insert(0, result)
+        except:
+            self.entry.delete(0, tk.END)
+            self.entry.insert(0, "Error")
+    elif text == "C":
+        self.entry.delete(0, tk.END)
+    elif text == "CE":
+        self.entry.delete(len(self.entry.get()) - 1, tk.END)
+    else:
+        self.entry.insert(tk.END, text)
