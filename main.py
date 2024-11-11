@@ -31,3 +31,7 @@ class Calculator:
         self.create_button("CE", 5, 1)
         self.create_button("(", 5, 2)
         self.create_button(")", 5, 3)
+
+        def create_button(self, text, row, column):
+         button = tk.Button(self.master, text=text, width=5, height=2, font=('Arial', 16), command=lambda: self.button_click(text))
+         button.grid(row=row, column=column, padx=5, pady=5)
